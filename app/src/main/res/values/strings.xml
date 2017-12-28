@@ -1,0 +1,172 @@
+<resources>
+    <string name="app_name">Music Signer</string>
+    <!-- User messages -->
+    <string name="msg_load_default">Loading</string>
+    <string name="msg_error_default">Unable to connect</string>
+    <string name="msg_disconnected">Check internet connection</string>
+    <string name="msg_enter_name">Please enter name</string>
+    <string name="msg_short_name">Username too short</string>
+    <string name="msg_enter_email">Please enter email</string>
+    <string name="msg_email_error">Invalid email</string>
+    <string name="msg_enter_pass1">Please enter password</string>
+    <string name="msg_enter_pass2">Please enter new password</string>
+    <string name="msg_pass_error">Password too short</string>
+    <string name="msg_pass_match">Passwords don\'t match</string>
+    <string name="msg_enter_otp">Please enter OTP</string>
+    <string name="msg_short_otp">OTP too short</string>
+    <string name="msg_logout_title">Are you sure?</string>
+    <string name="msg_logout_okay">Ok</string>
+    <string name="msg_search_keyword">Please enter keyword</string>
+    <string name="msg_add_comment">Please write comment</string>
+    <string name="msg_logout_cancel">Cancel</string>
+    <string name="msg_profile_error">Profile error</string>
+    <string name="msg_change_pass">Password updated</string>
+    <string name="msg_create_audio">Please record an audio</string>
+    <string name="msg_create_caption">Please enter a caption</string>
+    <string name="msg_create_image">Please choose an image</string>
+    <string name="msg_report_error">First select issue</string>
+    <string name="msg_no_network">Disconnected</string>
+    <string name="msg_no_data">No Data Found</string>
+    <string name="msg_retry">Retry</string>
+    <string name="msg_record_start">Recording started</string>
+    <string name="msg_record_stop">Recording stopped</string>
+    <string name="msg_post_add">Post created successfully</string>
+    <string name="msg_post_update">Post updated successfully</string>
+    <string name="msg_share_twitter">Share on Twitter</string>
+    <string name="msg_twitter_success">Sharing on Twitter</string>
+    <string name="msg_twitter_failure">Twitter not installed</string>
+    <string name="msg_share_facebook">Share with Facebook Friends</string>
+    <string name="msg_facebook_failure">Messenger not installed</string>
+    <string name="msg_share_whatsapp">Share with Whatsapp Contacts</string>
+    <string name="msg_whatsapp_failure">Whatsapp not installed</string>
+
+    <string name="login_hint_email">Email Id</string>
+    <string name="login_hint_pass">Password</string>
+    <string name="login_forgot_pass">Forgot Password</string>
+    <string name="button_text_signup">Signup</string>
+    <string name="login_option_text">or</string>
+    <string name="signup_name_text">Name</string>
+    <string name="signup_email_text">Email Id</string>
+    <string name="signup_pass1_text">Password</string>
+    <string name="signup_pass2_text">Confirm Password</string>
+    <string name="pass_forgot_text">Email Id</string>
+    <string name="pass_button_text">Get OTP</string>
+    <string name="pass_otp_text">Enter OTP</string>
+    <string name="pass_enter_text">Current Password</string>
+    <string name="pass_enter1_text">Enter New Password</string>
+    <string name="pass_enter2_text">Confirm New Password</string>
+    <string name="pass_reset_text">RESET</string>
+    <string name="set_title_general">GENERAL</string>
+    <string name="set_title_account">ACCOUNT</string>
+    <string name="set_title_invite">INVITE</string>
+    <string name="set_title_support">SUPPORT</string>
+    <string name="set_title_about">ABOUT</string>
+    <string name="set_info_push">Push Notification</string>
+    <string name="set_info_facebook">Facebook Friends</string>
+    <string name="set_info_whatsapp">Whatsapp Contacts</string>
+    <string name="set_info_profile">Edit Profile</string>
+    <string name="set_info_password">Change Password</string>
+    <string name="set_info_logout">Logout</string>
+    <string name="set_info_help">FAQs</string>
+    <string name="set_info_report">Report A Problem</string>
+    <string name="set_info_privacy">Privacy Policy</string>
+    <string name="set_info_terms">Terms</string>
+    <string name="set_report_info">Briefy explain what happened</string>
+    <string name="set_report_photo">Attach Scrrenshot</string>
+    <string name="set_report_button">Report</string>
+    <string name="hint_title_search1">Topic or People</string>
+    <string name="tag_title_text">Tag People</string>
+    <string name="tag_user_text">Who\'s this?</string>
+
+    <string name="post_create_tag">Tag People</string>
+    <string name="post_create_edit">Edit Photo</string>
+    <string name="post_audio_time">00:00</string>
+    <string name="post_create_text">DONE</string>
+    <string name="post_update_text">UPDATE</string>
+    <string name="post_caption_text">Add caption...</string>
+    <string name="dialog_image_title">Pick image</string>
+    <string name="dialog_image_camera">Camera</string>
+    <string name="dialog_image_gallery">Gallery</string>
+
+    <string name="invite_friend">Invite Friends</string>
+    <string name="facebook">Facebook</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="snapchat">SnapChat</string>
+
+
+    <string name="set_report_success">Your report has been submitted successfully</string>
+    <string name="set_report_text">Please Enter Text</string>
+    <string name="msg_error_text">Some error occured</string>
+    <string name="msg_fetch_text">Fetching Data</string>
+    <string name="post_delete_title">Delete Post</string>
+    <string name="post_delete_message">Are you sure you want to delete this post</string>
+    <string name="post_delete_positive">Yes</string>
+    <string name="post_delete_negative">Cancel</string>
+    <string name="share_sucessfully">Mudzic shared a post on your timeline</string>
+
+    <string name="hint_profile_bio">Bio</string>
+    <string name="hint_profile_male">Male</string>
+    <string name="hint_profile_female">Female</string>
+    <string name="hint_profile_other">Other</string>
+    <string name="hint_add_comment">Add a comment...</string>
+
+    <!-- Explore seaarch tabs -->
+    <string name="search_user_text">People</string>
+    <string name="search_topic_text">Topic</string>
+
+    <!-- Registration tabs -->
+    <string name="user_signup_text">SIGNUP</string>
+    <string name="likes_title_text">Likes</string>
+    <string name="comments_title_text">Comments</string>
+    <string name="listeners_title_text">Listeners</string>
+    <string name="listening_title_text">Listening</string>
+
+    <string-array name="list_search_tabs">
+        <item>@string/search_user_text</item>
+        <item>@string/search_topic_text</item>
+    </string-array>
+
+    <string name="demo_min_label"></string>
+    <string name="demo_max_label"></string>
+    <string name="alert_dialog_message">Mudzic will continue to play songs when you exit the app?</string>
+    <string name="alert_yes">Continue</string>
+    <string name="alert_no">Exit</string>
+
+    <string name="facebook_app_id">1333577299986654</string>
+    <string name="google_web_client_id">264380270017-l8ecn8ducf6dihkmvubkf3ni1prf87h6.apps.googleusercontent.com</string>
+    <string name="original">Original</string>
+    <string name="rehashed">Rehashed</string>
+    <string name="listen">Listen</string>
+
+    //social links hint
+
+    //Music links hint
+    <string name="social_link">Add social ink</string>
+    <string name="music_link">Add music link</string>
+    <string name="chrome">Browser</string>
+    <string name="google">GooglePlus</string>
+    <string name="tumbler">Tumbler</string>
+    <string name="itunes_options">Itunes</string>
+    <string name="spotify">Spotify</string>
+    <string name="soundcloud">SoundCloud</string>
+    <string name="saavn">Saavn</string>
+    <string name="gaana">Gaana</string>
+    <string name="tidal">Tidal</string>
+    <string name="twitter">Twitter</string>
+    <string name="insta">InstaGram</string>
+    <string name="msg_instagram_failure">Instagram Not Installed</string>
+    <string name="hint_search_songs">Search From Apple Music Library</string>
+
+    <string name="select_type">Please select Post Type</string>
+    <string name="original_music">Original Music</string>
+    <string name="rehashedtag">Non-Original Music</string>
+    <string name="sign_in">SIGNIN</string>
+    <string name="home">Home</string>
+    <string name="explore">Explore</string>
+    <string name="notification">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="update">Update</string>
+    <string name="search">Search</string>
+    <string name="invite">Invite</string>
+    <string name="submit">Submit</string>
+</resources>

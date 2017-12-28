@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="hashtag_suggestions">#223F51B5</color>
+    <color name="settings_back">#f2f2f2</color>
+    <color name="settings_divider">#9c9c9c</color>
+    <color name="highlight">#f3f3f3</color>
+
+    <color name="progress">#3F51B5</color>
+    <color name="textColorLight">#b9b9b9</color>
+    <color name="textColorPrimary">#464646</color>
+    <color name="textColorPrimaryDark">#000000</color>
+
+    <color name="background_start">#283199</color>
+    <color name="trans">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="add_comment">#e7e9ef</color>
+    <color name="hint_text">#464646</color>
+    <color name="grey_light">#dddddd</color>
+    <color name="grey">#aaaaaa</color>
+    <color name="grey_dark">#707070</color>
+    <color name="media_color">#283199</color>
+
+    <!-- for profileviewpagercolor-->
+    <color name="grid_black">#80000000</color>
+    <color name="seekbar_color">#ff6994</color>
+    <color name="divider_color">#d3d3d3</color>
+    <color name="create_activity_header">#FAFAFA</color>
+    <color name="bs_divider_color">#E0E0E0</color>
+
+</resources>
