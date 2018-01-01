@@ -6,7 +6,7 @@ import android.musicsigner.android.web.BaseRequest;
  * Created by gaurav.pandey on 28-12-2017.
  */
 
-public class SIgnUpRequest extends BaseRequest {
+public class SignUpRequest extends BaseRequest {
     public String name;
     public String email;
     public String password;
