@@ -34,41 +34,132 @@ import in.editsoft.api.exception.APIException;
 
 public class ForgotPasswordFragment extends BaseFragment {
     View view;
-    @BindView(R.id.et_user_email)
-    EditText etUserEmail;
-    @BindView(R.id.btn_send_email)
-    TextView btnSendEmail;
-    @BindView(R.id.ll_enter_email)
-    LinearLayout llEnterEmail;
-    @BindView(R.id.et_user_otp)
-    EditText etUserOtp;
-    @BindView(R.id.et_user_pass1)
-    EditText etUserPass1;
-    @BindView(R.id.et_user_pass2)
-    EditText etUserPass2;
-    @BindView(R.id.btn_reset_pass)
-    TextView btnResetPass;
-    @BindView(R.id.ll_reset_pass)
-    LinearLayout llResetPass;
-    @BindView(R.id.linearLayout)
-    RelativeLayout linearLayout;
+
     Unbinder unbinder;
 
     private String mEmail;
+
+    // Declare all views here
+    LinearLayout llEnterEmail;
+    EditText etUserEmail;
+    TextView btnSendEmail;
+    LinearLayout llResetPass;
+    RelativeLayout linearLayout;
+    EditText etUserOtp;
+    EditText etUserPass1;
+    EditText etUserPass2;
+    TextView btnResetPass;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_pro_pass_forgot, container, false);
         unbinder = ButterKnife.bind(this, view);
+        setUpViews();
         intialization();
         setUpElements();
         return view;
     }
 
+    private void setUpViews() {
+        linearLayout = view.findViewById(R.id.linearLayout);
+        llEnterEmail = view.findViewById(R.id.ll_enter_email);
+        etUserEmail = view.findViewById(R.id.et_user_email);
+        btnSendEmail = view.findViewById(R.id.btn_send_email);
+        llResetPass = view.findViewById(R.id.ll_reset_pass);
+        etUserOtp = view.findViewById(R.id.et_user_otp);
+        etUserPass1 = view.findViewById(R.id.et_user_pass1);
+        etUserPass2 = view.findViewById(R.id.et_user_pass2);
+        btnResetPass = view.findViewById(R.id.btn_reset_pass);
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mContext = getActivity();
+        setClickListeners();
+    }
+
+    private void setClickListeners() {
+        btnSendEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = etUserEmail.getText().toString();
+                if (validateEmail(email)) {
+                    if (!Utility.isConnected()) {
+                        Utility.showToast(R.string.msg_disconnected);
+                    } else {
+                        mEmail = email;
+                        submitOtpRequest();
+                    }
+                }
+            }
+        });
+
+
+        btnResetPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String otp = etUserOtp.getText().toString();
+                String pass1 = etUserPass1.getText().toString();
+                String pass2 = etUserPass2.getText().toString();
+                if (validateDetails(otp, pass1, pass2)) {
+                    if (!Utility.isConnected()) {
+                        Utility.showToast(R.string.msg_disconnected);
+                    } else {
+                        submitPasswordRequest(otp, pass1);
+                    }
+                }
+            }
+        });
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utility.hideSoftKeyboard(getActivity());
+            }
+        });
+    }
+    private void submitOtpRequest() {
+        ((BaseActivity) mContext).showProgress();
+        GetOtpRequest getOtpRequest = new GetOtpRequest();
+        getOtpRequest.setEmail(mEmail);
+        GetOtpService getOtpService = new GetOtpService();
+        getOtpService.executeService(getOtpRequest, new BaseApiCallback<GetOtpResponse>() {
+            @Override
+            public void onComplete() {
+                ((BaseActivity) mContext).dismissProgress();
+            }
+
+            @Override
+            public void onSuccess(@NonNull GetOtpResponse response) {
+                super.onSuccess(response);
+                if (response.getStatus().getCode() == 200) {
+                    llEnterEmail.setVisibility(View.GONE);
+                    llResetPass.setVisibility(View.VISIBLE);
+                } else {
+                    Utility.showToast(response.getStatus().getDescription());
+                }
+            }
+
+            @Override
+            public void onFailure(APIException e) {
+                super.onFailure(e);
+            }
+        });
+    }
+
+
+
+
     private void setUpElements() {
+
+
     }
 
     private void intialization() {
+
+
     }
 
 
@@ -144,6 +235,28 @@ public class ForgotPasswordFragment extends BaseFragment {
         });
     }
 
+
+    private boolean validateDetails(String otp, String pass1, String pass2) {
+        Utility.hideSoftKeyboard(getActivity());
+        if (!Utility.validateString(otp)) {
+            Utility.showToast(R.string.msg_enter_otp);
+            return false;
+        } else if (otp.length() < 6) {
+            Utility.showToast(R.string.msg_short_otp);
+            return false;
+        } else if (!Utility.validateString(pass1)) {
+            Utility.showToast(R.string.msg_enter_pass1);
+            return false;
+        } else if (pass1.length() < 6) {
+            Utility.showToast(R.string.msg_pass_error);
+            return false;
+        } else if (!pass1.equals(pass2)) {
+            Utility.showToast(R.string.msg_pass_match);
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     private boolean validateEmail(String email) {
         Utility.hideSoftKeyboard(getActivity());

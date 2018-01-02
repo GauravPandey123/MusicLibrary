@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MusicLibrary.iml" filepath="$PROJECT_DIR$/MusicLibrary.iml" />
+      <module fileurl="file://D:\EditSoft Project\MusicSigner\MusicLibrary.iml" filepath="D:\EditSoft Project\MusicSigner\MusicLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MusicSigner.iml" filepath="$PROJECT_DIR$/MusicSigner.iml" />
       <module fileurl="file://D:\EditSoftProjects\MusicLibrary\MusicSigner.iml" filepath="D:\EditSoftProjects\MusicLibrary\MusicSigner.iml" />
       <module fileurl="file://$PROJECT_DIR$/api/api.iml" filepath="$PROJECT_DIR$/api/api.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

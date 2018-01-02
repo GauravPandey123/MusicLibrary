@@ -29,30 +29,16 @@ import in.editsoft.api.exception.APIException;
 
 public class LoginActivity extends BaseActivity {
 
-    @BindView(R.id.et_user_email)
+    // Declare all views here
     EditText etUserEmail;
-    @BindView(R.id.et_user_pass)
     EditText etUserPass;
-    @BindView(R.id.imageViewShowPassword)
-    ImageView imageViewShowPassword;
-    @BindView(R.id.btn_user_login)
-    TextView btnUserLogin;
-    @BindView(R.id.textViewSignUp)
-    TextView textViewSignUp;
-    @BindView(R.id.textViewForgotPassword)
-    TextView textViewForgotPassword;
-    @BindView(R.id.iv_login_linkedin)
-    ImageView ivLoginLinkedin;
-    @BindView(R.id.iv_login_facebook)
-    ImageView ivLoginFacebook;
-    @BindView(R.id.iv_login_google)
+    TextView tvForgotPass, tvSignUp;
     ImageView ivLoginGoogle;
-    @BindView(R.id.iv_login_instagram)
-    ImageView ivLoginInstagram;
-    @BindView(R.id.btn_user_signup)
+    ImageView ivLoginFacebook;
+    TextView btnUserLogin;
     Button btnUserSignup;
-    @BindView(R.id.fragment_container)
-    FrameLayout fragmentContainer;
+    ImageView showPassword;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -82,6 +68,24 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void initialization() {
+        etUserEmail = (EditText) findViewById(R.id.et_user_email);
+        etUserPass = (EditText) findViewById(R.id.et_user_pass);
+        tvForgotPass = (TextView) findViewById(R.id.textViewForgotPassword);
+        ivLoginGoogle = (ImageView) findViewById(R.id.iv_login_google);
+        ivLoginFacebook = (ImageView) findViewById(R.id.iv_login_facebook);
+        btnUserLogin = (TextView) findViewById(R.id.btn_user_login);
+        btnUserSignup = (Button) findViewById(R.id.btn_user_signup);
+        showPassword = (ImageView) findViewById(R.id.imageViewShowPassword);
+        tvSignUp = (TextView) findViewById(R.id.textViewSignUp);
+
+        tvForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, MainActivity.class);
+                intent.putExtra(AppConstants.VIEW_TYPE, MainActivity.FORGOT_VIEW);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
